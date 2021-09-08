@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<header>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
+	<script src="./inputTag.js"></script>
+</header>
+
+<body>
+
+	<div class="uk-background-secondary uk-light uk-padding uk-panel">
+		<h1 >Trigger Button Click on Enter</h1>
+		<p >Press the "Enter" key inside the input field to trigger the button.</p>
+
+		<div class="uk-flex-inline">
+			<div>
+				<input class="uk-input uk-form-small" type="text" id="txttags" placeholder="Put your tags here and press enter" value="" />
+			</div>
+			<div>
+				<button id="btnAddTag" class="uk-margin-small-left uk-button uk-button-primary uk-button-small">Add Tag</button>
+			</div>
+		</div>		
+	</div>	
+	<div id="badges"></div>
+
+
+
+	<script>
+		inputTag(
+			{
+				inputTagId: 'txttags',
+				badgesId: 'badges',
+				btnTagId: 'btnAddTag',
+				callbackOnError: () => {
+					return UIkit.notification({
+						message: '<span>' + 'Only words are allowed' + '</span>',
+						pos: 'top-center',
+						timeout: 2000
+					});
+				},
+				label: {
+					classes: ["uk-badge", "uk-background-primary"]
+				},
+				btnClose: {
+					classes: ["uk-margin-small-left"],
+					attributes: [{ name: "uk-close", value: '' }]
+				}
+			}
+		);
+	</script>
+
+</body>
+
+</html>

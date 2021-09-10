@@ -32,25 +32,25 @@ Download/clone `inputTag.js` file and import on your project.
  #### How to use (Como usar):
 
  :us: 
- 
+
 Starting the component:
 
 ```javascript
 
 		inputTag(
 			{
-				inputTagId: '', # Required, the ID of input tag where text are tipped.
-				badgesId:  '', # Required, the ID of div where the tags will be insert.
-				btnTagId: '', # Optional, the ID of button to add the tags.
-				callbackOnError: () => {}, # Optional, to trigger when a non suportted text tag are tipped.
+				inputTagId: '', // Required, the ID of input tag where text are tipped.
+				badgesId:  '', // Required, the ID of div where the tags will be insert.
+				btnTagId: '', // Optional, the ID of button to add the tags.
+				callbackOnError: () => {}, // Optional, to trigger when a non suportted text tag are tipped.
 				label: {
-					classes: [], # Optional, array of classes to be applied on tag.
-                    attributes: [{ name: '', value: '' }] # Optional, array of objects with attributes to be applied on tag.
+					classes: [], // Optional, array of classes to be applied on tag.
+                    attributes: [{ name: '', value: '' }] // Optional, array of objects with attributes to be applied on tag.
 				},
 				btnClose: {
-					classes: [], # Optional, array of classes to be applied on close button inside the tag.
-					attributes: [{ name: '' value: '' }], # Optional, array of objects with attributes to be applied on close button inside the tag.
-                    textContent: '' # Optional, string to put in textContent property on close button inside the tag.
+					classes: [], // Optional, array of classes to be applied on close button inside the tag.
+					attributes: [{ name: '' value: '' }], // Optional, array of objects with attributes to be applied on close button inside the tag.
+                    textContent: '' // Optional, string to put in textContent property on close button inside the tag.
 				}
 			}
 		);
@@ -64,18 +64,18 @@ Inicializando o componente.
 
 		inputTag(
 			{
-				inputTagId: '', # Obrigatório, ID do elemento input onde o texto será inserido.
-				badgesId:  '', # Obrigatório, ID da Div onde as tags serão inseridas.
-				btnTagId: '', # Opcional, ID do botão para adicionar as tags.
-				callbackOnError: () => {}, # Opcional, função a ser executada quando os dados inseridos forem incorretos.
+				inputTagId: '', // Obrigatório, ID do elemento input onde o texto será inserido.
+				badgesId:  '', // Obrigatório, ID da Div onde as tags serão inseridas.
+				btnTagId: '', // Opcional, ID do botão para adicionar as tags.
+				callbackOnError: () => {}, // Opcional, função a ser executada quando os dados inseridos forem incorretos.
 				label: {
-					classes: [], # Opcional, array de classes a serem inseridas na Tag.
-                    attributes: [{ name: '', value: '' }] # Opcional, array de objetos com os atributos para serem aplicados na tag.
+					classes: [], // Opcional, array de classes a serem inseridas na Tag.
+                    attributes: [{ name: '', value: '' }] // Opcional, array de objetos com os atributos para serem aplicados na tag.
 				},
 				btnClose: {
-					classes: [], # Opcional, array de classes a serem inseridas no botão fechar.
-					attributes: [{ name: '', value: '' }], # Opcional, array de objetos com os atributos para serem aplicados no botão fechar.
-                    textContent: '' # Opcional, string para ser inserida na propriedade textContent do botão fechar.
+					classes: [], // Opcional, array de classes a serem inseridas no botão fechar.
+					attributes: [{ name: '', value: '' }], // Opcional, array de objetos com os atributos para serem aplicados no botão fechar.
+                    textContent: '' // Opcional, string para ser inserida na propriedade textContent do botão fechar.
 				}
 			}
 		);

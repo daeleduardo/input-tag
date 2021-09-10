@@ -1,6 +1,7 @@
  ## Tag Input
 
  :us: 
+
  This is a simple Tag Input component, written on Vanilla JS, where you can use any custom Style or CSS framework, setting attributes and classes.
 
 
@@ -11,6 +12,7 @@ Componente simples de Tag Input escrito em Javascript puro, onde pode-se inserir
 #### How works (Como funciona):
 
  :us: 
+
 Added a listener in a input text and/or button where when fire the event, get the value of input tag and create a custom badge (a div with added text and close button).
 
  :brazil:
@@ -20,6 +22,7 @@ Added a listener in a input text and/or button where when fire the event, get th
 #### Install (Como instalar):
 
  :us: 
+
 Download/clone `inputTag.js` file and import on your project.
 
  :brazil:
@@ -29,9 +32,10 @@ Download/clone `inputTag.js` file and import on your project.
  #### How to use (Como usar):
 
  :us: 
+ 
 Starting the component:
 
-`javascript
+```javascript
 
 		inputTag(
 			{
@@ -50,13 +54,13 @@ Starting the component:
 				}
 			}
 		);
-`
+```
 
  :brazil:
 
 Inicializando o componente.
 
-`javascript
+```javascript
 
 		inputTag(
 			{
@@ -75,11 +79,12 @@ Inicializando o componente.
 				}
 			}
 		);
-` 
+```
 
   #### Notes (Observações):
   
    :us:
+
     *   The Id of badges tag is the text, only words *[a-Z]* are allowed.
     *   If has no one item, (no classes, attributes, textContent) in btnClose a textContent with "X" will be added.
 

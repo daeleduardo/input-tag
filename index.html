@@ -28,7 +28,7 @@
 
 		<div class="uk-flex-inline">
 			<div>
-				<input class="uk-input uk-form-small" type="text" id="txttags" placeholder="Put your tags here and press enter" value="" />
+				<input class="uk-input uk-form-small uk-form-width-large" type="text" id="txtTags" placeholder="Put your tags here and press enter" value="" />
 			</div>
 			<div>
 				<button id="btnAddTag" class="uk-margin-small-left uk-button uk-button-primary uk-button-small">Add Tag</button>
@@ -37,12 +37,10 @@
 	</div>	
 	<div id="badges"></div>
 
-
-
 	<script>
 		inputTag(
 			{
-				inputTagId: 'txttags',
+				inputTagId: 'txtTags',
 				badgesId: 'badges',
 				btnTagId: 'btnAddTag',
 				callbackOnError: () => {

@@ -51,11 +51,11 @@ function inputTag(params) {
 
 		const label = document.createElement("div");
 
-		if (isFilledArray(data.label.classes)) {
+		if ((typeof data.label.classes !== 'undefined') && isFilledArray(data.label.classes)) {
 			data.label.classes.forEach(className => { label.classList.add(className); });
 		}
 
-		if (isFilledArray(data.label.attributes)) {
+		if ((typeof data.label.attributes !== 'undefined') && isFilledArray(data.label.attributes)) {
 			data.label.attributes.forEach(att => {
 				const attribute = document.createAttribute(att.name);
 				attribute.value = att.value;
@@ -65,7 +65,7 @@ function inputTag(params) {
 
 		const close = document.createElement("button");
 
-		if (isFilledArray(data.btnClose.attributes)) {
+		if ((typeof data.btnClose.attributes !== 'undefined') && isFilledArray(data.btnClose.attributes)) {
 			data.btnClose.attributes.forEach(att => {
 				const attribute = document.createAttribute(att.name);
 				attribute.value = att.value;
@@ -73,8 +73,12 @@ function inputTag(params) {
 			});
 		}
 
-		if (isFilledArray(data.btnClose.classes)) {
+		if ((typeof data.btnClose.classes !== 'undefined') && isFilledArray(data.btnClose.classes)) {
 			data.btnClose.classes.forEach(className => { close.classList.add(className); });
+		}
+
+		if ((typeof data.btnClose.textContent !== 'undefined')) {
+			close.textContent = data.btnClose.textContent;
 		}
 
 		label.innerText = txt.value;
@@ -91,7 +95,7 @@ function inputTag(params) {
 	}
 
 	const isFilledArray = (arr) => {
-		return typeof arr !== 'undefined' && Array.isArray(arr) && (arr.length > 0)
+		return Array.isArray(arr) && (arr.length > 0)
 	}
 
 	const input = document.getElementById(params.inputTagId);

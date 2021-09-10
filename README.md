@@ -9,6 +9,8 @@
 
 Componente simples de Tag Input escrito em Javascript puro, onde pode-se inserir as classes e propriedades que desejar para fazer a customização de estilo.
 
+[Demo (Demonstração)](https://daeleduardo.github.io/input-tag/index.html)
+
 #### How works (Como funciona):
 
  :us: 
